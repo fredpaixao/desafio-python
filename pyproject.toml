@@ -12,5 +12,8 @@ readme = "README.md"
 [project.scripts]
 vendas-cli = "vendas_cli.cli:main"
 
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
 [tool.setuptools.packages.find]
 include = ["vendas_cli*"]
