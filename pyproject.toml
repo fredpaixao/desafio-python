@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vendas-cli"
+version = "1.0.0"
+description = "Gerador de relatório de vendas avançado a partir de CSV"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+vendas-cli = "vendas_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vendas_cli*"]

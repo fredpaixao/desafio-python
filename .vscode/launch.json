@@ -1,0 +1,67 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "vendas-cli (text)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/vendas_cli/cli.py",
+      "console": "integratedTerminal",
+      "args": ["vendas.csv", "--format", "text"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "vendas-cli (json + filtro)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/vendas_cli/cli.py",
+      "console": "integratedTerminal",
+      "args": [
+        "vendas.csv",
+        "--format",
+        "json",
+        "--start",
+        "2025-01-01",
+        "--end",
+        "2025-03-31"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "vendas-cli (sem filtro, json)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/vendas_cli/cli.py",
+      "console": "integratedTerminal",
+      "args": ["vendas.csv", "--format", "json"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "vendas-cli (arquivo inexistente)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/vendas_cli/cli.py",
+      "console": "integratedTerminal",
+      "args": ["nao_existe.csv"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "pytest (todos os testes)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "console": "integratedTerminal",
+      "args": ["-v"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "pytest (arquivo específico)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "console": "integratedTerminal",
+      "args": ["tests/test_core.py", "-v"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
